@@ -25,7 +25,7 @@ Install dependencies
 npm install 
 ```
 
-Add configuration information to `.env`. You would need to include Nexmo and TLF APIs credentials:
+Add configuration information to `.env`. You will need to include Nexmo and TLF APIs credentials:
 
 
 ```code bash
