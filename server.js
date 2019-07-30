@@ -32,9 +32,7 @@ app.post('/inbound', (req, res) => {
 	}
 	else {
 		sendMessage(Number_msisdn, 'Valid values are ' + lines)
-
 	}
-
 	res.status(204).send()
 })
 
@@ -50,13 +48,11 @@ function checkLineStatus(Line, number) {
 	request(options, function (err, res, body) {
 		if (err) {
 			console.log(err)
-
 		}
 		else {
 			if (body[0].lineStatuses[0].statusSeverityDescription === 'Good Service') {
 				console.log('There is a ' + body[0].lineStatuses[0].statusSeverityDescription + ' operating on ' + body[0].name + ' line')
 				sendMessage(number, 'There is a ' + body[0].lineStatuses[0].statusSeverityDescription + ' operating on ' + body[0].name + ' line')
-
 			}
 			else {
 				for (let i = 0; i < body.length; i++) {
@@ -71,21 +67,17 @@ function checkLineStatus(Line, number) {
 	})
 }
 
+
 function sendMessage(to, message) {
 	nexmo.message.sendSms(process.env.Nexmo_LVN, to, message,
 		(err, responseData) => {
 			if (err) {
 				console.log(err);
 			} else {
-
 				console.dir(responseData.messages);
-
 			}
 		})
 }
-
-
-
 
 
 app.listen(port, () => { console.log('App listening in port ', port) })
