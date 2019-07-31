@@ -56,8 +56,7 @@ nexmo link:sms YOUR_NUMBER https://NGROK_SUBDOMAIN.ngrok.io/sms/receive
 
 Send an SMS to the Nexmo registered `Nexmo_LVN` with the London tube line name as the body message and you will receive a message back with the current status of the line.
 
-For detailed instructions please see the tutorial.
 
 ## Tutorial
 
-**TODO: Information and link to the tutorial**
+For detailed instructions please see [this tutorial](https://www.nexmo.com/blog/2019/07/31/checking-the-tube-status-with-nexmo-and-tfl-apis-dr).
